@@ -55,7 +55,7 @@ public class BonusTest {
   public ExpectedException exceptionRule = ExpectedException.none();
 
   @Test
-  public void whenExceptionThrown_thenRuleIsApplied() {
+  public void whenExceptionThrown() {
     exceptionRule.expect(NumberFormatException.class);
     Bonus bonus = new Bonus();
     exceptionRule.expectMessage("Value of -5 cannot be negative.");
